@@ -3,7 +3,7 @@ services:
     name: avatar_app
     env: ruby
     plan: free  # Puedes cambiar el plan según tus necesidades
-    buildCommand: "bundle install && yarn install && bundle exec rails assets:precompile && rails db:seed"
+    buildCommand: "bundle install && yarn install && bundle exec rails assets:precompile && bundle exec rails db:migrate && bundle exec rails db:seed"
     startCommand: "bundle exec rails server -p 10000"
     envVars:
       - key: RAILS_ENV
@@ -21,3 +21,7 @@ databases:
     plan: free                           # Plan de la base de datos (puedes ajustar según tus necesidades)
     defaultDatabase: true
     postgresVersion: 14                  # Puedes elegir la versión de PostgreSQL que prefieras
+
+
+
+    
