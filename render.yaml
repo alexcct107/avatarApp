@@ -19,9 +19,10 @@ databases:
     databaseName: avatar_app_production  # Nombre de tu base de datos PostgreSQL
     user: avatar_user                    # Nombre del usuario de la base de datos
     plan: free                           # Plan de la base de datos (puedes ajustar según tus necesidades)
-    defaultDatabase: true
-    postgresVersion: 14                  # Puedes elegir la versión de PostgreSQL que prefieras
-
+  - key: RAILS_MASTER_KEY
+        sync: false
+  - key: WEB_CONCURRENCY
+        value: 2 # sensible default
 
 
     
